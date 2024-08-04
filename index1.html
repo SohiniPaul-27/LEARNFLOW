@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        .multiple-text{
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+            color:#333;
+            font-weight:bold;
+        }
+    </style>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header class="home">
+        <div class="topnav-right">
+            <ul class="nav-links">
+                <nav class="navbar">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#qualification">Qualification</a></li>
+                    <li><a href="#Internships">Internships</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </nav>
+            </ul>
+            <div class="photo-container">
+                <img src="C:\Users\91842\Downloads\img.jpg" alt="Profile Photo" style="width:10%;">
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <h3>Hi, Myself</h3>
+        <h1>Sohini Paul</h1>
+        <h3>I'm a <span class="multiple-text"></span></h3>
+        <p>I am currently in my pre-final year of my college with the skills of <span class="skill">C</span>, <span class="skill">Python</span>, <span class="skill">Java</span>.</p>
+        <p>Now I want to apply these skills in the professional field.</p>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/sohini-paul-96b21322a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/SohiniPaul-27" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed('.multiple-text', {
+            strings: ['College-student', 'Coding enthusiast'],
+            typeSpeed: 90,
+            backSpeed: 70,
+            backDelay: 100,
+            loop: true,
+        });
+    </script>
+    <script src="script1.js"></script>
+    <section class="qualification" id="qualification">
+        <h2 class="heading">My <span>Educational Background</span></h2>
+
+        <div class="qualification-row">
+            <div class="qualification-column">
+                <div class="qualification-box">
+                    <div class="qualification-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-solid fa-calendar-days"></i>2022-2026</div>
+                            <h3>Bachelor's Degree</h3>
+                            <p>Proudly striving with my Bachelor's of Technology in Computer Science (B.Tech) at Institute of Engineering and Management,
+                            Kolkata.Appreciative of the solid foundation provided through my coursework and the guidance from my professors. I am now looking to apply my skills in the tech industry and am actively seeking internship opportunities.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="qualification-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-solid fa-calendar-days"></i>2020-2022</div>
+                            <h3>Intermediate</h3>
+                            <p>Successfully completed 10+2 education from Baghbazar Multipurpose Girls' School with decent grades.
+                            </p>
+                        </div>
+                    </div>
+                    <section class="Internships" id="Internships">
+                    <div id="internships" class="Internships-row">
+                        <h2 class="heading">My <span>Experience</span></h2>
+                    </section>
+                        <div class="Internships-column">
+                            <div class="Internships-box">
+                                <div class="Internships-content">
+                                    <div class="content">
+                                        <div class="internships-content">
+                                            <div class="content">
+                                    <div class="year"><i class="fa-solid fa-calendar-days"></i>Feb-Aug[2024] </div>
+                                    <h3>Web-developer and Java Developer Intern</h3>
+                                    <p>I’ve completed internships at CodSoft and Oasis InfoByte, where I worked on diverse projects and applied my technical skills to create user-friendly systems. Currently, I’m interning at LearnFlow, focusing on learning and deploying web versions of various systems.
+                                    </p>
+                                </div>
+                            </div>
+                            <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+                            <script>
+                                ScrollReveal().reveal('.home-img, .Internships-box, .box_container, .contactForm, .about-content p', {
+                                    origin: 'bottom'
+                                });
+                            </script>
+                             <section class="contact" id="contact">
+                                <div class="max-width">
+                                  <h2 class="title">Contact Me</h2>
+                                  <div class="contact-content">
+                                    <div class="column left">
+                                      <div class="text">Get in Touch</div>
+                                      <p>
+                                        Please feel free to contact me. I am always open to discussing new projects, innovative ideas, or opportunities to collaborate. 
+                                        For any questions or inquiries, you can reach out to me via email.
+                                        I would be happy to provide any information you need.
+                                      </p>
+                                      <div class="icons">
+                                        <a href="#">
+                                          <div class="row">
+                                            <i class="fa-solid fa-user-large"></i>
+                                            <div class="info">
+                                              <div class="head">Name</div>
+                                              <div class="sub-title">
+                                                <a href="#" style="text-decoration: none; color: #333">
+                                                  Sohini Paul</a>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </a>
+                          
+                                        <div class="row">
+                                          <i class="fa-solid fa-envelope"></i>
+                                          <div class="info">
+                                            <div class="head">Email</div>
+                                            <div class="sub-title">
+                                              <a
+                                                href="mailto:#"
+                                                style="text-decoration: none; color: #333"
+                                              >
+                                                sohinipaul2013@gmail.com</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                          
+                                        <div class="row">
+                                          <i class="bi bi-translate"></i>
+                                          <div class="info">
+                                            <div class="head">Language Known:</div>
+                                            <div class="sub-title">English,Hindi, Bengali</div>
+                                          </div>
+                                        </div>
+                          
+                            <a href="C:\Users\91842\Downloads\ResumeSP-1.pdf" target="blank">Download my CV</a>
+        
+</body>
+</html>
