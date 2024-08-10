@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <style>
+        .add-to-cart {
+            background-color: #28a745;
+            color: white;
+            padding: 8px 16px;
+            cursor: pointer;
+            border: none;
+            margin-top: 8px;
+        }
+        #cartAmount {
+            font-weight: bold;
+            color: red;
+        }
+        .cart-item {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        #ShoppingCart {
+            margin-top: 20px;
+        }
+    </style>
+
+  
+    <div>
+        <span>Cart Items: </span><span id="cartAmount">0</span>
+    </div>
+
+    
+    <div class="pro">
+        <img src="C:\Users\91842\Pictures\Saved Pictures\Screenshots\Screenshot (40).png" alt="">
+        <div class="des">
+            <span>Denim</span>
+            <h5>Opaque Casual Shirt</h5>
+            <h4>Rs.509</h4>
+            <button class="add-to-cart" data-product-id="1">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="pro">
+        <img src="C:\Users\91842\Pictures\Saved Pictures\Screenshots\Screenshot (41).png" alt="">
+        <div class="des">
+            <span>Anayna</span>
+            <h5>Women Kurta with Palazzo</h5>
+            <h4>Rs.1199</h4>
+            <button class="add-to-cart" data-product-id="2">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="pro">
+        <img src="C:\Users\91842\Pictures\Saved Pictures\Screenshots\Screenshot (43).png" alt="">
+        <div class="des">
+            <span>H&M</span>
+            <h5>Woven Jumpsuits</h5>
+            <h4>Rs.899</h4>
+            <button class="add-to-cart" data-product-id="3">Add to Cart</button>
+        </div>
+    </div>
+
+    
+    <div id="ShoppingCart"></div>
+    <div id="label"></div>
+
+    <script>
+        let basket = [];
+
+        let calculation = () => {
+            let cartIcon = document.getElementById("cartAmount");
+            cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
+        };
+        calculation();
+
+        let generateCartItems = () => {
+            let ShoppingCart = document.getElementById("ShoppingCart");
+            let label = document.getElementById("label");
+
+            if (basket.length !== 0) {
+                ShoppingCart.innerHTML = basket.map((item) => `
+                    <div class="cart-item">
+                        <h5>${item.name}</h5>
+                        <p>Quantity: ${item.item}</p>
+                        <p>Price: Rs.${item.price}</p>
+                    </div>
+                `).join('');
+            } else {
+                ShoppingCart.innerHTML = '';
+                label.innerHTML = `
+                    <h2>Cart is Empty</h2>
+                    <a href="shop.html">Continue Shopping</a>
+                `;
+            }
+        };
+        generateCartItems();
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', (event) => {
+                let productId = event.target.dataset.productId;
+                let productName = event.target.parentElement.querySelector('h5').innerText;
+                let productPrice = event.target.parentElement.querySelector('h4').innerText.replace('Rs.', '');
+                
+                let existingItem = basket.find(item => item.id === productId);
+
+                if (existingItem) {
+                    existingItem.item += 1;
+                } else {
+                    basket.push({
+                        id: productId,
+                        name: productName,
+                        price: productPrice,
+                        item: 1
+                    });
+                }
+
+                calculation();
+                generateCartItems();
+            });
+        });
+    </script>
+</body>
+</html>

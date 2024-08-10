@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+
+</head>
+<body>
+    <h2>Your Cart</h2>
+    <script src="script2.js" src=""></script>
+    <div id="ShoppingCart">
+        <h5>Quantity:2</h5>
+        <p>Total Price:1708</p>
+    </div>
+    <div id="total">
+        
+    </div>
+
+    <script>
+        let basket = JSON.parse(localStorage.getItem("basket")) || [];
+
+        let generateCartItems = () => {
+            let ShoppingCart = document.getElementById("ShoppingCart");
+            let totalElement = document.getElementById("total");
+
+            if (basket.length !== 0) {
+                ShoppingCart.innerHTML = basket.map((item) => `
+                    <div class="cart-item">
+                        <h5>${item.name}</h5>
+                        <p>Quantity: ${item.item}</p>
+                        <p>Price: Rs.${item.price * item.item}</p>
+                    </div>
+                `).join('');
+
+                let total = basket.reduce((acc, item) => acc + (item.price * item.item), 0);
+                totalElement.innerHTML = `<h3>Total: Rs.${total}</h3>`;
+            } else {
+                ShoppingCart.innerHTML = `<h3>Cart is Empty</h3>`;
+                totalElement.innerHTML = '';
+            }
+        };
+        generateCartItems();
+    </script>
+</body>
+</html>
