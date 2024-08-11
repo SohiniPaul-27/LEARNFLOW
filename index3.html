@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <h1>The Trivia Fever 104</h1>
+
+    <div>
+        <label for="usernameInput">Enter Username: </label>
+        <input type="text" id="usernameInput">
+    </div>
+  
+    <div class="start_btn">
+        <button id="startButton">Start Game</button>
+    </div>
+    <div class="buttons">
+        <button class="quit">Exit</button>
+
+        
+    <div class="info_box">
+        <div class="info_title">
+            <span>Rules:</span>
+        </div>
+        <div class="info">1. You can't pause the game.</div>
+        <div class="info">2. You will only have 15 seconds for each question.</div>
+        <div class="info">3. You can reach up to 3 levels of this game.</div>
+        
+        </div>
+    </div>
+    <div id="levelMessage" style="display:none;"></div>
+
+
+    <div class="quiz_box" style="display:none;">
+        <div id="question"></div>
+        <div id="options"></div>
+        <div id="score">Score: 0</div>
+        <div id="timer">Time: 15s</div>
+        <div id="level">Level: 1</div>
+        <button id="nextButton" style="display:none;">Next Question</button>
+    </div>
+
+    <div class="result_box" style="display:none;">
+        <h2>Final Score</h2>
+        <p id="finalScore"></p>
+        <button id="restartButton">Restart Game</button>
+    </div>
+
+    <script src="index3.js"></script>
+
+</body>
+</html>
