@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanse Tracker</title>
+    <div id="root"></div>
+</head>
+<body>
+    <h1>Budget Buddy</h1>
+    <link rel="stylesheet" href="style4.css">
+    <main>
+        <header>
+    <div>
+        <h5>Total Balance</h5>
+        <span id="balance">Rs0.00</span>
+    </div>
+    <div>
+    <h5>Income</h5>
+    <span id="income">Rs.0.00</span>
+    <div>
+        <h5>Expense</h5>
+        <span id="expense">Rs.0.00</span>
+    </div>
+</div>
+</header>
+<section>
+    <h3>Add Transaction type and value</h3>
+    <form id="transactionForm">
+        <div>
+            <label for="name">Transaction Type</label>
+            <input type="text" required/>
+        </div>
+        <div>
+            <label for="amount">Insert amount</label>
+            <input type="number"
+            name="amount"
+            value="0"
+            min="0.01"
+            step="0.01" required/>
+        </div>
+        <div>
+            <label for="date">Add specific date</label>
+            <input type="date" required/>
+        </div>
+    </form>
+    <button type="Save">Save Data</button>
+
+</section>
+</main>
+
+<script src="index4.js"></script>
+<script src="form.js"></script>
+<script src="graph.js"></script>
+<script src="App.js"></script>
+</body>
+</html>

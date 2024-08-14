@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    padding:2rem;
+    font-family:"Poppins",sans-serif;
+    background-color:var(--bg-color);
+    color:var(--text-color);
+}
+h1{
+    text-align: center;
+}
+main{
+    max-width:400px;
+    margin: 1rem auto;
+    background-color:bisque;
+    padding: 1rem;
+    box-shadow: 0 3px 5px rgba(0,0,0,0);
+}
+form input{
+    width:100%;
+}
